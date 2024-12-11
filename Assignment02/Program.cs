@@ -4,7 +4,23 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Q1 :  Write a program that takes a number from the user then print yes if that number can be divided by 3 and 4 otherwise print no.
+            Console.WriteLine("Enter The Number: ");
+            String num = Console.ReadLine();
+            bool flag = int.TryParse(num, out int NewNum);
+
+            if (flag){
+                if (NewNum % 3 == 0 && NewNum % 4 == 0){
+                    Console.WriteLine("Yes");
+                }
+                else{
+                    Console.WriteLine("No");
+                }
+            }else{
+                Console.WriteLine("Invalid Input");
+            }
+            
+            #endregion
         }
     }
 }
