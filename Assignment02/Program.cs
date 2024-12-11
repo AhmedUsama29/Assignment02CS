@@ -47,24 +47,69 @@
             #endregion
 
             #region Q3 : Write a program that takes 3 integers from the user then prints the max element and the min element.
-            //no need to do big try parse [i understand]
-            Console.WriteLine("Enter the first number:");
-            int num1 = int.Parse(Console.ReadLine());
+            ////no need to do big try parse [i understand]
+            //Console.WriteLine("Enter the first number:");
+            //int num1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the second number:");
-            int num2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the second number:");
+            //int num2 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the third number:");
-            int num3 = int.Parse(Console.ReadLine());
-            
-            int max = Math.Max(num1, Math.Max(num2, num3));
-            int min = Math.Min(num1, Math.Min(num2, num3));
+            //Console.WriteLine("Enter the third number:");
+            //int num3 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"The maximum value is: {max}");
-            Console.WriteLine($"The minimum value is: {min}");
+            //int max = Math.Max(num1, Math.Max(num2, num3));
+            //int min = Math.Min(num1, Math.Min(num2, num3));
+
+            //Console.WriteLine($"The maximum value is: {max}");
+            //Console.WriteLine($"The minimum value is: {min}");
 
 
             #endregion
+
+            #region Q4 : Write a program that allows the user to insert an integer number then check If a number is even or odd.
+
+            //Console.WriteLine("Enter an integer number:");
+
+            //string input = Console.ReadLine();
+            //bool flag = int.TryParse(input, out int number);
+
+            //if (flag)
+            //{
+            //    if (number % 2 == 0)
+            //    {
+            //        Console.WriteLine($"{number} is even");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"{number} is odd");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid input");
+            //}
+
+            #endregion
+
+            #region Q5 : Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print (consonant).
+
+            //Console.WriteLine("Enter a character:");
+            //char input = Console.ReadKey().KeyChar;
+
+            //char lowerInput = Char.ToLower(input);
+
+            //if (lowerInput == 'a' || lowerInput == 'e' || lowerInput == 'i' || lowerInput == 'o' || lowerInput == 'u')
+            //{
+            //    Console.WriteLine("\nVowel");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("\nConsonant");
+            //}
+
+            #endregion
+        
+        
         }
     }
 }
