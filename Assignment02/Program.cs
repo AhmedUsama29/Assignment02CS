@@ -108,8 +108,25 @@
             //}
 
             #endregion
-        
-        
+
+            #region Q6 : Write a program that allows the user to insert an integer then print all numbers between 1 to that number.
+            //Console.WriteLine("Enter positive number:");
+
+            //bool flag = int.TryParse(Console.ReadLine(), out int number);
+
+            //if (flag && number > 0)
+            //{
+            
+            //    for (int i = 1; i <= number; i++)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Please enter a valid positive number");
+            //}
+            #endregion
         }
     }
 }
