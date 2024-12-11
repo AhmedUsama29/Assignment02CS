@@ -274,61 +274,61 @@
 
             #region Q12 : Write a program to create a Simple Calculator.
 
-            double num1, num2;
-            char operation;
+            //double num1, num2;
+            //char operation;
 
-            Console.WriteLine("Enter the first number:");
-            if (!double.TryParse(Console.ReadLine(), out num1))
-            {
-                Console.WriteLine("Invalid input for the first number.");
-                return;
-            }
+            //Console.WriteLine("Enter the first number:");
+            //if (!double.TryParse(Console.ReadLine(), out num1))
+            //{
+            //    Console.WriteLine("Invalid input for the first number.");
+            //    return;
+            //}
 
-            Console.WriteLine("Enter an operator (+, -, *, /):");
-            operation = Console.ReadKey().KeyChar;
+            //Console.WriteLine("Enter an operator (+, -, *, /):");
+            //operation = Console.ReadKey().KeyChar;
 
-            Console.WriteLine("Enter the second number:");
-            if (!double.TryParse(Console.ReadLine(), out num2))
-            {
-                Console.WriteLine("Invalid input for the second number.");
-                return;
-            }
+            //Console.WriteLine("Enter the second number:");
+            //if (!double.TryParse(Console.ReadLine(), out num2))
+            //{
+            //    Console.WriteLine("Invalid input for the second number.");
+            //    return;
+            //}
 
-            double result = 0;
-            bool validOperation = true;
+            //double result = 0;
+            //bool validOperation = true;
 
-            switch (operation)
-            {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    if (num2 != 0)
-                    {
-                        result = num1 / num2;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error: Division by zero.");
-                        validOperation = false;
-                    }
-                    break;
-                default:
-                    Console.WriteLine("Invalid operator.");
-                    validOperation = false;
-                    break;
-            }
+            //switch (operation)
+            //{
+            //    case '+':
+            //        result = num1 + num2;
+            //        break;
+            //    case '-':
+            //        result = num1 - num2;
+            //        break;
+            //    case '*':
+            //        result = num1 * num2;
+            //        break;
+            //    case '/':
+            //        if (num2 != 0)
+            //        {
+            //            result = num1 / num2;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Error: Division by zero.");
+            //            validOperation = false;
+            //        }
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid operator.");
+            //        validOperation = false;
+            //        break;
+            //}
 
-            if (validOperation)
-            {
-                Console.WriteLine($"The result of {num1} {operation} {num2} is: {result}");
-            }
+            //if (validOperation)
+            //{
+            //    Console.WriteLine($"The result of {num1} {operation} {num2} is: {result}");
+            //}
 
             #endregion
         }
