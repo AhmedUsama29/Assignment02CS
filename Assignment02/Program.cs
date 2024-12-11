@@ -47,22 +47,47 @@
             #endregion
 
             #region Q3 : Write a program that takes 3 integers from the user then prints the max element and the min element.
-            //no need to do big try parse [i understand]
-            Console.WriteLine("Enter the first number:");
-            int num1 = int.Parse(Console.ReadLine());
+            ////no need to do big try parse [i understand]
+            //Console.WriteLine("Enter the first number:");
+            //int num1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the second number:");
-            int num2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the second number:");
+            //int num2 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the third number:");
-            int num3 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the third number:");
+            //int num3 = int.Parse(Console.ReadLine());
+
+            //int max = Math.Max(num1, Math.Max(num2, num3));
+            //int min = Math.Min(num1, Math.Min(num2, num3));
+
+            //Console.WriteLine($"The maximum value is: {max}");
+            //Console.WriteLine($"The minimum value is: {min}");
+
+
+            #endregion
+
+            #region Q4 : Write a program that allows the user to insert an integer number then check If a number is even or odd.
             
-            int max = Math.Max(num1, Math.Max(num2, num3));
-            int min = Math.Min(num1, Math.Min(num2, num3));
+            Console.WriteLine("Enter an integer number:");
 
-            Console.WriteLine($"The maximum value is: {max}");
-            Console.WriteLine($"The minimum value is: {min}");
+            string input = Console.ReadLine();
+            bool flag = int.TryParse(input, out int number);
 
+            if (flag)
+            {
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine($"{number} is even");
+                }
+                else
+                {
+                    Console.WriteLine($"{number} is odd");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid input");
+            }
 
             #endregion
         }
