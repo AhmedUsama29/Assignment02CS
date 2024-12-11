@@ -116,7 +116,7 @@
 
             //if (flag && number > 0)
             //{
-            
+
             //    for (int i = 1; i <= number; i++)
             //    {
             //        Console.WriteLine(i);
@@ -126,6 +126,27 @@
             //{
             //    Console.WriteLine("Please enter a valid positive number");
             //}
+            #endregion
+
+            #region Q7 : Write a program that allows the user to insert an integer then print a multiplication table up to 12.
+
+            Console.WriteLine("Enter a number:");
+
+            
+            bool flag = int.TryParse(Console.ReadLine(), out int number);
+
+            if (flag)
+            {
+                Console.WriteLine($"Multiplication table for {number}:");
+                for (int i = 1; i <= 12; i++)
+                {
+                    Console.WriteLine($"{number} x {i} = {number * i}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid number");
+            }
             #endregion
         }
     }
