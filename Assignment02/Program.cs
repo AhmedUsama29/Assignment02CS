@@ -232,46 +232,105 @@
 
             #region Q11 :  Write a program to input the month number and print the number of days in that month.
 
-            Console.WriteLine("Enter a number:");
+            //Console.WriteLine("Enter a number:");
 
 
-            bool flag = int.TryParse(Console.ReadLine(), out int month);
+            //bool flag = int.TryParse(Console.ReadLine(), out int month);
 
-            if (flag)
-            {
-                switch (month) {
+            //if (flag)
+            //{
+            //    switch (month) {
 
-                    case 1:
-                    case 3:
-                    case 5:
-                    case 7:
-                    case 8:
-                    case 10:
-                    case 12:
-                        Console.WriteLine("31 days");
-                        break;
-                    case 4:
-                    case 6:
-                    case 9:
-                    case 11:
-                        Console.WriteLine("30 days");
-                        break;
-                    case 2:
-                        Console.WriteLine("28 or 29 days");
-                        break;
-                    default:
-                        Console.WriteLine("Please enter a valid month number");
-                        break;
+            //        case 1:
+            //        case 3:
+            //        case 5:
+            //        case 7:
+            //        case 8:
+            //        case 10:
+            //        case 12:
+            //            Console.WriteLine("31 days");
+            //            break;
+            //        case 4:
+            //        case 6:
+            //        case 9:
+            //        case 11:
+            //            Console.WriteLine("30 days");
+            //            break;
+            //        case 2:
+            //            Console.WriteLine("28 or 29 days");
+            //            break;
+            //        default:
+            //            Console.WriteLine("Please enter a valid month number");
+            //            break;
 
-                }
-            }
-            else
-            {
-                Console.WriteLine("Please enter a valid number");
-            }
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Please enter a valid number");
+            //}
 
             #endregion
 
+            #region Q12 : Write a program to create a Simple Calculator.
+
+            double num1, num2;
+            char operation;
+
+            Console.WriteLine("Enter the first number:");
+            if (!double.TryParse(Console.ReadLine(), out num1))
+            {
+                Console.WriteLine("Invalid input for the first number.");
+                return;
+            }
+
+            Console.WriteLine("Enter an operator (+, -, *, /):");
+            operation = Console.ReadKey().KeyChar;
+
+            Console.WriteLine("Enter the second number:");
+            if (!double.TryParse(Console.ReadLine(), out num2))
+            {
+                Console.WriteLine("Invalid input for the second number.");
+                return;
+            }
+
+            double result = 0;
+            bool validOperation = true;
+
+            switch (operation)
+            {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: Division by zero.");
+                        validOperation = false;
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Invalid operator.");
+                    validOperation = false;
+                    break;
+            }
+
+            if (validOperation)
+            {
+                Console.WriteLine($"The result of {num1} {operation} {num2} is: {result}");
+            }
+
+            #endregion
         }
     }
 
