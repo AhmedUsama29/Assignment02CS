@@ -170,33 +170,65 @@
 
             #endregion
 
-            #region Q9 : 
+            #region Q9 : Write a program that takes two integers then prints the power.
 
-            Console.WriteLine("Enter the base number:");
+            //Console.WriteLine("Enter the base number:");
 
-            bool FlagBase = int.TryParse(Console.ReadLine(), out int baseNumber);
+            //bool FlagBase = int.TryParse(Console.ReadLine(), out int baseNumber);
 
-            Console.WriteLine("Enter the exponent:");
+            //Console.WriteLine("Enter the exponent:");
 
-            bool FlagExponent = int.TryParse(Console.ReadLine(), out int exponent);
+            //bool FlagExponent = int.TryParse(Console.ReadLine(), out int exponent);
 
-            if (FlagBase && FlagExponent && exponent >= 0)
-            {
-                int result = 1;
+            //if (FlagBase && FlagExponent && exponent >= 0)
+            //{
+            //    int result = 1;
 
-                for (int i = 1; i <= exponent; i++)
-                {
-                    result *= baseNumber; 
-                }
+            //    for (int i = 1; i <= exponent; i++)
+            //    {
+            //        result *= baseNumber; 
+            //    }
 
-                Console.WriteLine($"{baseNumber} raised to the power of {exponent} is {result}");
-            }
-            else
-            {
-                Console.WriteLine("Please enter valid integers, and ensure the exponent is non-negative.");
-            }
+            //    Console.WriteLine($"{baseNumber} raised to the power of {exponent} is {result}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Please enter valid integers, and ensure the exponent is non-negative.");
+            //}
 
             #endregion
+
+            #region Q10 : Write a program to enter marks of five subjects and calculate total, average and percentage.
+
+            Console.WriteLine("Enter marks for 5 subjects:");
+
+            int[] marks = new int[5];
+            int total = 0;
+            double average, percentage;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write($"Enter marks for subject {i + 1}: ");
+                bool flag = int.TryParse(Console.ReadLine(), out marks[i]);
+
+                if (!flag || marks[i] < 0)
+                {
+                    Console.WriteLine("Please enter a valid non-negative value for marks");
+                    return;
+                }
+
+                total += marks[i];
+            }
+
+            average = total / 5;
+            percentage = (total / 500) * 100;
+
+            Console.WriteLine($"\nTotal marks: {total}");
+            Console.WriteLine($"Average marks: {average}");
+            Console.WriteLine($"Percentage: {percentage}%");
         }
+
+        #endregion
     }
+    
 }
