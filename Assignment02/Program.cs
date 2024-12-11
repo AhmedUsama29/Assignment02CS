@@ -152,7 +152,7 @@
             #region Q8 : Write a program that allows to user to insert number then print all even numbers between 1 to this number
             //Console.WriteLine("Enter a number:");
 
-           
+
             //bool flag = int.TryParse(Console.ReadLine(), out int number);
 
             //if (flag && number >= 1)
@@ -167,6 +167,34 @@
             //{
             //    Console.WriteLine("Please enter a valid positive integer.");
             //}
+
+            #endregion
+
+            #region Q9 : 
+
+            Console.WriteLine("Enter the base number:");
+
+            bool FlagBase = int.TryParse(Console.ReadLine(), out int baseNumber);
+
+            Console.WriteLine("Enter the exponent:");
+
+            bool FlagExponent = int.TryParse(Console.ReadLine(), out int exponent);
+
+            if (FlagBase && FlagExponent && exponent >= 0)
+            {
+                int result = 1;
+
+                for (int i = 1; i <= exponent; i++)
+                {
+                    result *= baseNumber; 
+                }
+
+                Console.WriteLine($"{baseNumber} raised to the power of {exponent} is {result}");
+            }
+            else
+            {
+                Console.WriteLine("Please enter valid integers, and ensure the exponent is non-negative.");
+            }
 
             #endregion
         }
