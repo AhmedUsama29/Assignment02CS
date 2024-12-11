@@ -130,23 +130,44 @@
 
             #region Q7 : Write a program that allows the user to insert an integer then print a multiplication table up to 12.
 
-            Console.WriteLine("Enter a number:");
+            //Console.WriteLine("Enter a number:");
 
-            
-            bool flag = int.TryParse(Console.ReadLine(), out int number);
 
-            if (flag)
-            {
-                Console.WriteLine($"Multiplication table for {number}:");
-                for (int i = 1; i <= 12; i++)
-                {
-                    Console.WriteLine($"{number} x {i} = {number * i}");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Please enter a valid number");
-            }
+            //bool flag = int.TryParse(Console.ReadLine(), out int number);
+
+            //if (flag)
+            //{
+            //    Console.WriteLine($"Multiplication table for {number}:");
+            //    for (int i = 1; i <= 12; i++)
+            //    {
+            //        Console.WriteLine($"{number} x {i} = {number * i}");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Please enter a valid number");
+            //}
+            #endregion
+
+            #region Q8 : Write a program that allows to user to insert number then print all even numbers between 1 to this number
+            //Console.WriteLine("Enter a number:");
+
+           
+            //bool flag = int.TryParse(Console.ReadLine(), out int number);
+
+            //if (flag && number >= 1)
+            //{
+            //    Console.WriteLine($"Even numbers between 1 and {number}:");
+            //    for (int i = 2; i <= number; i += 2)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Please enter a valid positive integer.");
+            //}
+
             #endregion
         }
     }
